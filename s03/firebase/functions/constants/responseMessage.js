@@ -21,4 +21,11 @@ module.exports = {
 
     // 유저 삭제 성공
     USER_DELETE_SUCCESS: "유저 삭제 성공",
+
+    // 포스트
+    POST_READING_SUCCESS: "포스팅 조회 성공",
+    POST_SUCCESS: "포스팅 성공",
+    POST_FAIL: "포스팅 실패",
+    NO_POST: "존재하지 않는 게시글입니다.",
+    
 };
