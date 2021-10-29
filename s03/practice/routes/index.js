@@ -7,6 +7,7 @@ var router = express.Router();
 // });
 
 router.use("/user", require("./user"));
+router.use("/post", require("./posting"));
 
 module.exports = router;
 

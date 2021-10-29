@@ -29,18 +29,18 @@ module.exports = async (req, res) => {
   
     // ~~~ 유효한 데이터인지 확인 ~~~
     // ~~~ 1. request body가 잘못됐을 때
-    // truthy, falsy
-    // 값이 없다면..
+    // truthy, falsy 이용
+    // 하나라도 값이 없다면 잘못된 데이터
   
     // 예시
     // {email: ""} // 빈 문자열
     // {email: null} // null
     // {} // 키도 없음
     if (!email || !name || !password) {
-      // return을 해야 함 (매우 중요!!)
-      // return res.status(400).send({status: 400, message: "BAD REQUEST"})
-  
+      // return을 해야 함 (매우 중요!!): 함수를 중간에 끝내야 함
+      
       // util을 써서 통일할 수 있음
+      // return res.status(400).send({status: 400, message: "BAD REQUEST"})
       return res
         .status(400)
         .send(util.fail(statusCode.BAD_REQUEST, responseMessage.NULL_VALUE));
