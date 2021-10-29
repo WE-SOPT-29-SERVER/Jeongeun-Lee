@@ -1,0 +1,12 @@
+// 폴더이름/라우터이름/메서드
+
+// response 데이터 형식 지정
+const util = require('../../../lib/util');
+const responseMessage = require('../../../constants/responseMessage');
+const statusCode = require('../../../constants/statusCode');
+
+const users = require('../../../dbMockup/user');
+
+module.exports = async (req, res) => {
+    res.status(statusCode.OK).send(util.success(statusCode.OK, responseMessage.LOGIN_SUCCESS, "유저 테스트 페이지"));
+}
