@@ -7,8 +7,8 @@ const secretKey = process.env.JWT_SECRET;
 // 유저 정보를 토큰화하는 옵션
 const options = {
   algorithm: 'HS256',
-  expiresIn: '30s', // 프로덕션은 기간을 더 짧게 함
-  issuer: 'wesopt', // 누가 서명
+  expiresIn: '1d', // 프로덕션은 기간을 더 짧게 함
+  issuer: 'wesopt29', // 누가 서명
 };
 
 // jwt 토큰 만들기
@@ -24,7 +24,7 @@ const sign = (user) => {
 
   // 토큰 만들기
   const result = {
-    accesstoken: jwt.sign(payload, secretKey, options),
+    refreshtoken: jwt.sign(payload, secretKey, options),
     // refreshToken: jwt.sign(payload, secretKey, refreshOptions),
   };
   return result;

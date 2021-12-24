@@ -134,4 +134,6 @@ const addUser = async (client, email, username, phone, idFirebase) => {
   return convertSnakeToCamel.keysToCamel(rows[0]);
 };
 
+
+
 module.exports = { getAllUsers, getUserById, getUserByIdFirebase, getUserByEmail, updateUser, deleteUser, addUser };

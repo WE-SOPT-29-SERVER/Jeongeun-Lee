@@ -37,6 +37,13 @@ module.exports = {
   TOKEN_INVALID: '토큰이 유효하지 않습니다.',
   TOKEN_EMPTY: '토큰이 없습니다.',
 
+  // refresh 토큰
+  REFRESH_TOKEN_EXPIRED: 'refresh 토큰이 만료되었습니다.',
+  REFRESH_TOKEN_INVALID: 'refresh 토큰이 유효하지 않습니다.',
+  REFRESH_TOKEN_EMPTY: 'refresh 토큰이 없습니다.',
+
+  GENERATE_NEW_TOKEN: '새로운 토큰이 발급되었습니다',
+
   // 인증
   NO_AUTH_HEADER: 'Authorization 헤더가 없습니다.',
 };

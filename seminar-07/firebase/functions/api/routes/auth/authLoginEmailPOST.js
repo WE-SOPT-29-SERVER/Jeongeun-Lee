@@ -5,10 +5,12 @@ const responseMessage = require('../../../constants/responseMessage');
 const { signInWithEmailAndPassword } = require('firebase/auth');
 const db = require('../../../db/db');
 const { userDB } = require('../../../db');
+const { refreshtokenDB } = require('../../../db');
 
 const { firebaseAuth } = require('../../../config/firebaseClient');
 
 const jwtHandlers = require('../../../lib/jwtHandlers');
+const refreshTokenHandlers = require('../../../lib/refreshTokenHandlers');
 module.exports = async (req, res) => {
   const { email, password } = req.body;
 
@@ -52,8 +54,15 @@ module.exports = async (req, res) => {
     // ~~~ 3. JWT 발급
     const { accesstoken } = jwtHandlers.sign(user);
 
-    // ~~~ 4. user + JWT를 response로 전송
-    res.status(statusCode.OK).send(util.success(statusCode.OK, responseMessage.LOGIN_SUCCESS, { user, accesstoken }));
+    // 3.5 refresh token 발급
+    const {refreshtoken} = refreshTokenHandlers.sign(user);
+
+    // refresh token을 DB에 추가
+    await refreshtokenDB.updateRefreshToken(client, user.id, refreshtoken);
+
+
+    // ~~~ 4. user + JWT + refresh token를 response로 전송
+    res.status(statusCode.OK).send(util.success(statusCode.OK, responseMessage.LOGIN_SUCCESS, { user, accesstoken, refreshtoken }));
   } catch (error) {
     console.log(error);
     functions.logger.error(`[EMAIL SIGNUP ERROR] [${req.method.toUpperCase()}] ${req.originalUrl}`, `[CONTENT] email: ${email} ${error}`);
