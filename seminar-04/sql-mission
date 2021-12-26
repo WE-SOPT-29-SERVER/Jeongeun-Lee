@@ -1,0 +1,106 @@
+INSERT INTO post (user_id, title, content) VALUES(3, 'title', 'something')
+RETURNING *;
+
+UPDATE post
+SET title = 'new title',
+    updated_at = now()
+WHERE post.id = 1
+RETURNING *;
+
+UPDATE post
+SET is_deleted = true,
+    updated_at = now()
+WHERE post.id = 1
+RETURNING *;
+
+insert into "user" (username, id_firebase, email, phone) values ('Dietrich Bonsale', 'Cd90Gwp', 'dbonsale0@addtoany.com', '319-864-7251');
+insert into "user" (username, id_firebase, email, phone) values ('Kelsey Hubback', 'b5RyJXiQVV', 'khubback1@hibu.com', '155-269-6882');
+insert into "user" (username, id_firebase, email, phone) values ('Noel Tewnion', 'A7bl33NdQ', 'ntewnion2@google.pl', '796-671-8061');
+insert into "user" (username, id_firebase, email, phone) values ('Meghann Veysey', 'QcN1jjLczEQM', 'mveysey3@skype.com', '477-621-4771');
+insert into "user" (username, id_firebase, email, phone) values ('Gil Ranklin', 'kD6q51', 'granklin4@time.com', '157-617-5201');
+insert into "user" (username, id_firebase, email, phone) values ('Paddy De Anesy', 'dkOiKrhKPt', 'pde5@oaic.gov.au', '231-433-8869');
+insert into "user" (username, id_firebase, email, phone) values ('Ardisj Scamel', 'Qb46nvWTR', 'ascamel6@wunderground.com', '722-979-6611');
+insert into "user" (username, id_firebase, email, phone) values ('Cherri Gooderidge', 'pPOHVCcND', 'cgooderidge7@360.cn', '866-366-4326');
+insert into "user" (username, id_firebase, email, phone) values ('Papagena Matuszyk', 'TAfNj3', 'pmatuszyk8@artisteer.com', '772-322-3794');
+insert into "user" (username, id_firebase, email, phone) values ('Ginnie Harriott', 'qFSt1Z3bOW', 'gharriott9@liveinternet.ru', '543-197-7410');
+insert into "user" (username, id_firebase, email, phone) values ('Gonzalo Grigolon', 'f1s26jWpa', 'ggrigolona@phoca.cz', '924-431-7915');
+insert into "user" (username, id_firebase, email, phone) values ('Armand Schusterl', 'MwNttRwEggDy', 'aschusterlb@geocities.jp', '623-295-4772');
+insert into "user" (username, id_firebase, email, phone) values ('Anitra Cookes', 'F9vNW92kgN', 'acookesc@state.gov', '576-814-8971');
+insert into "user" (username, id_firebase, email, phone) values ('Sadella Smale', 'hdX92nsmucwI', 'ssmaled@nhs.uk', '708-826-4872');
+insert into "user" (username, id_firebase, email, phone) values ('Gal McTerlagh', 'cZVG4Xsl', 'gmcterlaghe@craigslist.org', '950-700-4932');
+insert into "user" (username, id_firebase, email, phone) values ('Gianna Eidler', 'rRl6SpvjaB8d', 'geidlerf@stumbleupon.com', '999-956-0628');
+insert into "user" (username, id_firebase, email, phone) values ('Madeleine Mussen', '1tlHaI', 'mmusseng@cnn.com', '627-158-2508');
+insert into "user" (username, id_firebase, email, phone) values ('Tyrone Kamenar', 'QffItv7H', 'tkamenarh@i2i.jp', '900-802-9118');
+insert into "user" (username, id_firebase, email, phone) values ('Mickie Wanka', 'Kck8W5L0eJV', 'mwankai@unc.edu', '890-948-8971');
+insert into "user" (username, id_firebase, email, phone) values ('Glynda Florence', 'gjNZiSyb', 'gflorencej@github.com', '406-347-9194');
+
+
+
+INSERT INTO post (user_id, title, content, created_at) VALUES (12, 'Girl Crazy', 'Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui. Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris. Morbi non lectus.', '2/6/2020');
+INSERT INTO post (user_id, title, content, created_at) VALUES (4, 'Survival Quest', 'Nunc purus. Phasellus in felis. Donec semper sapien a libero. Nam dui. Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius. Integer ac leo.', '6/10/2019');
+INSERT INTO post (user_id, title, content, created_at) VALUES (13, 'Botany of Desire, The', 'Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis. Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.', '3/19/2020');
+INSERT INTO post (user_id, title, content, created_at) VALUES (4, 'Yeti: The Giant of the 20th Century', 'Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis. Sed ante. Vivamus tortor. Duis mattis egestas metus. Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh. Quisque id justo sit amet sapien dignissim vestibulum.', '11/16/2019');
+INSERT INTO post (user_id, title, content, created_at) VALUES (15, 'Eyes of a Stranger', 'Aliquam non mauris. Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis. Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem. Sed sagittis.', '8/8/2019');
+INSERT INTO post (user_id, title, content, created_at) VALUES (6, 'Logan''s Run', 'Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl. Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.', '10/25/2019');
+INSERT INTO post (user_id, title, content, created_at) VALUES (7, 'Cutie Honey', 'Integer a nibh. In quis justo.', '7/28/2019');
+INSERT INTO post (user_id, title, content, created_at) VALUES (8, 'Bright Leaves', 'Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque. Quisque porta volutpat erat.', '11/16/2019');
+INSERT INTO post (user_id, title, content, created_at) VALUES (19, 'Kairat', 'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.', '9/17/2019');
+INSERT INTO post (user_id, title, content, created_at) VALUES (10, 'Tatsumi', 'Nullam molestie nibh in lectus. Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.', '12/21/2019');
+
+SELECT * FROM post;
+
+
+
+
+
+
+SELECT * FROM "user";
+
+-- "user" 데이터의 개수
+SELECT COUNT(*) FROM "user";
+
+-- 둘의 차이를 비교해보세요~ --/
+SELECT username FROM "user" ORDER BY username;
+SELECT username FROM "user" ORDER BY username DESC;
+SELECT username, email FROM "user" WHERE id=5;
+
+-- INSERT 의 두 가지 방법 비교해보기 --/
+INSERT INTO "user" (username, id_firebase, email, phone) VALUES ('Anne', 'sA75idsd34E', 'Anne@sopt.org', '010-738-8304');
+-- 필수 데이터를 다 넣어주었을 때에만 가능 --/
+INSERT INTO "user" VALUES ('Conan', 'h43Dgbg68fDF23', 'Conan@sopt.org', '010-766-2514');
+
+-- 특정 id를 갖고 있는 사용자의 이름 바꾸기 --/
+UPDATE "user" SET username='gngsn' WHERE id=3;
+SELECT * FROM "user" WHERE id=3;
+
+-- 특정 id를 갖고 있는 사용자를 지우기 --/
+DELETE FROM "user" WHERE id=3;
+SELECT * FROM "user" WHERE id=3;
+
+
+SELECT * FROM post;
+
+-- post 데이터의 개수 --/
+SELECT COUNT(*) FROM "post";
+
+-- post title만 가져오기 --/
+SELECT title FROM "post";
+
+-- 아무 값이나 INSERT 해보기 --/
+INSERT INTO post (user_id, title, content, created_at) VALUES (1, '제목', '내용', '11/11/2021');
+
+-- id가 3인 데이터 조회하기 --/
+SELECT * FROM "post" WHERE id = 3;
+
+-- user_id가 2인 post 개체들을 모두 출력하기 --/
+SELECT * FROM "post" WHERE user_id =2;
+-- 선택 ) post.sql 내용을 전부 실행시켰다면 user_id가 4인 post+user 개체를 JOIN으로 출력해보기 --/
+SELECT * FROM "post" p, "user" u
+WHERE p.user_id = 4
+  AND p.user_id = u.id;
+
+-- id가 2인 데이터 날짜 현재로 수정하기 --/
+UPDATE "post" SET updated_at=now() WHERE id=2;
+
+-- id가 4인 데이터 지우기 --/
+UPDATE post SET is_deleted=true WHERE id=4;
